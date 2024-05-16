@@ -10,7 +10,7 @@
 import LineCard from '../common/LineCard.vue'
 const props = defineProps(['card'])
 
-console.log(props.card)
+// console.log(props.card)
 </script>
 
 <style lang="scss" />

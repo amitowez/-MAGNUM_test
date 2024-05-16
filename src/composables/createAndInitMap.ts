@@ -5,7 +5,7 @@ import { initMapFunc } from '@/functions/initMap'
 import {clickInMapFunc} from '@/functions/clickInMap'
 export const useCreateAndInitMap = ()=>{
     const MapStore = useMapStore()
-    function createPoints(){
+    function createPoints(): void{
       for(let i: number = 1;i<=MapStore.counterPoints;i++){
         createPoint(i)
       }

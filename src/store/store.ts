@@ -6,7 +6,7 @@ export const useMapStore = defineStore('MapStore', {
   state: (): State => ({
     points: {},
     featuresPoint:[],
-    counterPoints: 100,
+    counterPoints: 100000, // 100к
     showMap: ref(false),
     activeCardId: ref(0)
   }),

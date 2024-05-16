@@ -27,7 +27,6 @@ export function createPoint(id:number) {
     feature.setId(point.id)
     MapStore.featuresPoint.push(feature);
 }
-
 function randomWord(): string{
     const abc: string = "abcdefghijklmnopqrstuvwxyz";
     let result: string = "";

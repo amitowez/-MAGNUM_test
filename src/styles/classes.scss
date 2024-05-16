@@ -26,11 +26,14 @@ p{
   height: 100px;
   margin: 10px;
 }
-
 .card-in-panel-active{
+  border: 3px solid $color-point-accent;
+  margin: 20px 10px;
+}
+.card-in-panel-standart{
   border: 3px solid $color-accent;
 }
-.card-in-panel-passive{
+.card-in-panel-off{
   border: 3px solid $color-low-accent;
 }
 .card-container{

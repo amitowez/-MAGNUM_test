@@ -1,11 +1,11 @@
 <template>
     <div 
-        @click="MapStore.activeCardId = props.card.id" 
-        :class="props.card.showInMap ? 'card-in-panel-active' : 'card-in-panel-passive'" 
+        @click.capture="props.card.showInMap ? MapStore.activeCardId = props.card.id : ''" 
+        :class="props.card.showInMap ? (props.card.id === MapStore.activeCardId ? 'card-in-panel-active' :  'card-in-panel-standart') : 'card-in-panel-off'" 
         class="card-in-panel"
         >
         <div style="display: flex;align-items: center; justify-content: flex-start;">
-            <input  type="checkbox" v-model="props.card.showInMap">
+            <input type="checkbox" v-model="props.card.showInMap">
             <LineCard :desc="'Идентификатор'" :value="props.card.id" />
         </div>
         <LineCard :desc="'Описание'" :value="props.card.desc" />

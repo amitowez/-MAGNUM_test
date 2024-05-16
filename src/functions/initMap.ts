@@ -12,7 +12,7 @@ import {fromLonLat} from 'ol/proj';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js';
 import {Cluster, Vector as VectorSource} from 'ol/source.js';
 import { useMapStore } from "@/store/store";
-export function initMapFunc(ref: any, centerCoord: number[]){
+export function initMapFunc(ref: any, centerCoord: number[]): any{
     const MapStore = useMapStore()
     const source = new VectorSource({
         features: MapStore.featuresPoint,
@@ -26,30 +26,29 @@ export function initMapFunc(ref: any, centerCoord: number[]){
     const CLUSTERS = new VectorLayer({
       source: clusterSource,
       style: function (feature) {
-            const featId: number = feature.get('features')[0].getId()
-            // console.log( MapStore.activeCardId,featId)
-            const size = feature.get('features').length;
-            let style;
-            if (!style && MapStore.points[featId].showInMap) {
-              style = new Style({
-                image: new CircleStyle({
-                  radius: 10,
-                  stroke: new Stroke({
-                    color:  MapStore.activeCardId === featId ? 'red' :'#b40ff9',
-                  }),
-                  fill: new Fill({
-                    color:  MapStore.activeCardId === featId ? 'red' :'#b40ff9',
-                  }),
-                }),
-                text: new Text({
-                  text: size.toString(),
-                  fill: new Fill({
-                    color: '#fff',
-                  }),
-                }),
-              });
-            }
-            return style;
+        const featId: number = feature.get('features')[0].getId()
+        const size: number = feature.get('features').length;
+        let style;
+        if (!style && MapStore.points[featId].showInMap) {
+          style = new Style({
+            image: new CircleStyle({
+              radius: 10,
+              stroke: new Stroke({
+                color:  MapStore.activeCardId === featId ? 'red' :'#b40ff9',
+              }),
+              fill: new Fill({
+                color:  MapStore.activeCardId === featId ? 'red' :'#b40ff9',
+              }),
+            }),
+            text: new Text({
+              text: size.toString(),
+              fill: new Fill({
+                color: '#fff',
+              }),
+            }),
+          });
+        }
+        return style;
       },
     });
     const VIEW =  new View({
