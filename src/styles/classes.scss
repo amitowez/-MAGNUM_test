@@ -2,6 +2,57 @@
 p{
   margin: 4px;
 }
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  border: 1px solid $color-accent;
+  width: 15px;
+  background-color: #fff;
+}
+
+.container-checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container-checkbox input:checked ~ .checkmark {
+  background-color: $color-accent;
+}
+
+.checkmark:after {
+  content: "\2143";
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform:  translate(-53%, -60%) rotate(45deg);
+  -moz-transform:  translate(-53%, -60%) rotate(45deg);
+  -ms-transform:  translate(-53%, -60%) rotate(45deg);
+  transform: translate(-53%, -60%) rotate(45deg);
+}
+
 .pagin-btn{
   color: $color-accent;
   width: 50%;
@@ -43,7 +94,7 @@ p{
 }
 
 .card-container::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 .card-container::-webkit-scrollbar-thumb {

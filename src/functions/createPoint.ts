@@ -1,7 +1,7 @@
 
 import {maxLat, maxLon, minLat, minLon} from '@/consts/minMaxCoord'
 import { useMapStore } from "@/store/store";
-import { onMounted, reactive } from "vue";
+import {  reactive } from "vue";
 import {Coordinates, DataPoint} from '@/interfaces'
 import Feature from 'ol/Feature.js';
 import Point from 'ol/geom/Point.js';

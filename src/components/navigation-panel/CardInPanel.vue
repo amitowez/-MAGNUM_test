@@ -5,7 +5,10 @@
         class="card-in-panel"
         >
         <div style="display: flex;align-items: center; justify-content: flex-start;">
-            <input type="checkbox" v-model="props.card.showInMap">
+            <label class="container-checkbox">
+              <input type="checkbox"  v-model="props.card.showInMap">
+              <span class="checkmark"></span>
+            </label>
             <LineCard :desc="'Идентификатор'" :value="props.card.id" />
         </div>
         <LineCard :desc="'Описание'" :value="props.card.desc" />
