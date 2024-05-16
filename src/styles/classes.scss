@@ -1,10 +1,106 @@
 @import './vars.scss';
+p{
+  margin: 4px;
+}
+.line-card-desc{
+  color: $color-accent;
+  font-size: 17px;
+}
+.line-card-value{
+  font-size: 16px;
+}
+.desc-line-card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.map-point-card{
+  position: relative;
+  z-index: 101;
+}
+.open-card{
+  background-color: white;
+  position: absolute;
+  width: 300px;
+  min-height: 100px;
+  bottom: 20px;
+  border-radius: 20px;
+  left: -150px;
+  padding: 10px;
+  z-index: 100;
+}
+
+.open-card-bottom-rect{
+  background-color: white;
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  bottom: -2px;
+  left: 127.5px;
+  transform: rotate(45deg);
+  z-index: 99;
+
+}
+
+.background-point{
+  background-color: $color-accent;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  cursor: pointer;
+  left: -10px;
+  top: -10px;
+  border-radius: 50%;
+  z-index: 2;
+}
+.background-point-passive{
+  background-color: $color-accent;
+}
+.background-point-active{
+  background-color: $color-point-accent;
+}
+.up-point{
+  background-color: white;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  z-index: 3;
+}
+.list-panel{
+  width: 30%;
+  height: 100%;
+  position: relative;
+}
+
+.map-container{
+  position: relative;
+  width: 70%;
+  height: 100%;
+}
+
+.content-container{
+  width: calc(100vw - 16px);
+  height: calc(100vh - 16px);
+  display: flex;
+}
+.map-point{
+  position: relative;
+}
+
+.map-icon{
+  position: absolute;
+  cursor: pointer;
+  left: -10px;
+  top: -10px;
+}
 
 .centried{
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .loader-global{
     background-color: gray;
     opacity: 0.4;
