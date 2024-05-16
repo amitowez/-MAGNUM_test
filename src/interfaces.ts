@@ -21,6 +21,8 @@ export interface Coordinates {
 // }
 export interface State { // знаю что стейт будет один
     points: {[name: number]: DataPoint}
+    counterPoints: number 
     featuresPoint: any[]
     showMap: Ref<boolean>
+    activeCardId: Ref<number>
 }

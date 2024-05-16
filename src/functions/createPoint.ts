@@ -21,9 +21,10 @@ export function createPoint(id:number) {
         iconActive: false
     })
     const point = MapStore.points[id]
-    const feature = new Feature(new Point(fromLonLat([point.lon, point.lat]))) 
+    const feature = new Feature({
+       geometry: new Point(fromLonLat([point.lon, point.lat])),
+    }) 
     feature.setId(point.id)
-    console.log(feature)
     MapStore.featuresPoint.push(feature);
 }
 

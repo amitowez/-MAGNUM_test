@@ -2,6 +2,53 @@
 p{
   margin: 4px;
 }
+.pagin-btn{
+  color: $color-accent;
+  width: 50%;
+  cursor: pointer;
+}
+.pagin-btn-cont{
+  z-index: 200;
+  background-color: white;
+  position: fixed;
+  left: 7%;
+  bottom: 10px;
+  width: 100px;
+  height: 30px;
+  border: 2px solid $color-accent;
+}
+
+.card-in-panel{
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 20px;
+  width: calc(100% - 30px);
+  height: 100px;
+  margin: 10px;
+}
+
+.card-in-panel-active{
+  border: 3px solid $color-accent;
+}
+.card-in-panel-passive{
+  border: 3px solid $color-low-accent;
+}
+.card-container{
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.card-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+  background-color: $color-accent;
+  border-radius: 20px;      
+  border: 3px solid $color-accent;  
+}
+
 .line-card-desc{
   color: $color-accent;
   font-size: 17px;
@@ -68,14 +115,14 @@ p{
   z-index: 3;
 }
 .list-panel{
-  width: 30%;
+  width: 20%;
   height: 100%;
-  position: relative;
+  // position: relative;
 }
 
 .map-container{
   position: relative;
-  width: 70%;
+  width: 80%;
   height: 100%;
 }
 
